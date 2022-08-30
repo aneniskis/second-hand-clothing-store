@@ -37,18 +37,18 @@ const Navigation = () => {
   return (
     <Fragment>
       <NavigationContainer>
-        <LogoContainer to="/">
+        <LogoContainer to="/second-hand-clothing-shop">
           <CrownLogo />
         </LogoContainer>
         <NavLinks>
-          <NavLink to="/shop">SHOP</NavLink>
+          <NavLink to="/second-hand-clothing-shop/shop">SHOP</NavLink>
 
           {currentUser ? (
             <NavLink as="span" onClick={SignOutUser}>
               SIGN OUT
             </NavLink>
           ) : (
-            <NavLink to="/auth">SIGN IN</NavLink>
+            <NavLink to="/second-hand-clothing-shop/auth">SIGN IN</NavLink>
           )}
           <CartIcon />
         </NavLinks>

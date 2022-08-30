@@ -42,11 +42,20 @@ const App = () => {
   // }, []);
   return (
     <Routes>
-      <Route path="/" element={<Navigation />}>
+      <Route path="/second-hand-clothing-shop" element={<Navigation />}>
         <Route index element={<Home />}></Route>
-        <Route path="shop/*" element={<Shop />}></Route>
-        <Route path="auth" element={<Authentication />}></Route>
-        <Route path="checkout" element={<CheckOut />}></Route>
+        <Route
+          path="/second-hand-clothing-shop/shop/*"
+          element={<Shop />}
+        ></Route>
+        <Route
+          path="/second-hand-clothing-shop/auth"
+          element={<Authentication />}
+        ></Route>
+        <Route
+          path="/second-hand-clothing-shop/checkout"
+          element={<CheckOut />}
+        ></Route>
       </Route>
     </Routes>
   );
