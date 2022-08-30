@@ -42,18 +42,18 @@ const App = () => {
   // }, []);
   return (
     <Routes>
-      <Route path="/second-hand-clothing-shop" element={<Navigation />}>
+      <Route path="/second-hand-clothing-store" element={<Navigation />}>
         <Route index element={<Home />}></Route>
         <Route
-          path="/second-hand-clothing-shop/shop/*"
+          path="/second-hand-clothing-store/shop/*"
           element={<Shop />}
         ></Route>
         <Route
-          path="/second-hand-clothing-shop/auth"
+          path="/second-hand-clothing-store/auth"
           element={<Authentication />}
         ></Route>
         <Route
-          path="/second-hand-clothing-shop/checkout"
+          path="/second-hand-clothing-store/checkout"
           element={<CheckOut />}
         ></Route>
       </Route>

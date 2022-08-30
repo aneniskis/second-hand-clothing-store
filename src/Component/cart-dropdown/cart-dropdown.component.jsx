@@ -11,7 +11,7 @@ const CartDropdown = () => {
   const navigate = useNavigate();
 
   const goToCheckOuthandler = () => {
-    navigate("/second-hand-clothing-shop/checkout");
+    navigate("/second-hand-clothing-store/checkout");
   };
 
   const cartItems = useSelector(selectCartItems);
