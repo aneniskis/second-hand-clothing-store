@@ -7,6 +7,7 @@ import {
   selectCartItems,
   selectCartTotal,
 } from "../../store/cart/cart.selector";
+import PaymentForm from "../../Component/payment-form/PaymentForm";
 
 const CheckOut = () => {
   // const { cartItems, cartTotal } = useContext(CartContext);
@@ -30,6 +31,7 @@ const CheckOut = () => {
         <CheckOutItem key={cartItem.id} cartItem={cartItem} />
       ))}
       <span className="total">Total: ${cartTotal}</span>
+      <PaymentForm />
     </div>
   );
 };

@@ -12,6 +12,7 @@ import Authentication from "./Routes/authentication/authentication.component";
 // } from "./utils/firebase/firebase.utils";
 import { useEffect } from "react";
 import { checkUserSession } from "./store/user/user.action";
+import { GlobalStyle } from "./global.styles";
 // import { setCurrentUser } from "./store/user/user.action";
 
 // const Shop = () => {
@@ -41,23 +42,26 @@ const App = () => {
   //   return unsubcribe;
   // }, []);
   return (
-    <Routes>
-      <Route path="/second-hand-clothing-store" element={<Navigation />}>
-        <Route index element={<Home />}></Route>
-        <Route
-          path="/second-hand-clothing-store/shop/*"
-          element={<Shop />}
-        ></Route>
-        <Route
-          path="/second-hand-clothing-store/auth"
-          element={<Authentication />}
-        ></Route>
-        <Route
-          path="/second-hand-clothing-store/checkout"
-          element={<CheckOut />}
-        ></Route>
-      </Route>
-    </Routes>
+    <>
+      <GlobalStyle />
+      <Routes>
+        <Route path="/second-hand-clothing-store" element={<Navigation />}>
+          <Route index element={<Home />}></Route>
+          <Route
+            path="/second-hand-clothing-store/shop/*"
+            element={<Shop />}
+          ></Route>
+          <Route
+            path="/second-hand-clothing-store/auth"
+            element={<Authentication />}
+          ></Route>
+          <Route
+            path="/second-hand-clothing-store/checkout"
+            element={<CheckOut />}
+          ></Route>
+        </Route>
+      </Routes>
+    </>
   );
 };
 
